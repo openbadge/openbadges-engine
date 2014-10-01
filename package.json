@@ -1,0 +1,42 @@
+{
+  "name": "openbadges-engine",
+  "version": "0.0.0",
+  "description": "Open Badges' CMS based on Express framework",
+  "keywords": [
+    "openbadges",
+    "engine",
+    "CMS"
+  ],
+  "homepage": "https://github.com/openbadges-issuer/openbadges-engine",
+  "bugs": "https://github.com/openbadges-issuer/openbadges-engine/issues",
+  "author": {
+    "name": "Evgeniy Gavryushin",
+    "email": "job.egavr@yandex.ru",
+    "url": "https://github.com/eGavr"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git://github.com/openbadges-issuer/openbadges-engine.git"
+  },
+  "main": "lib/index.js",
+  "bin": {
+    "openbadges-server": "./bin/openbadges-server"
+  },
+  "dependencies": {
+    "express": "4.9.4",
+    "body-parser": "1.8.3",
+    "formidable": "1.0.15",
+    "lodash": "2.4.1",
+    "jws": "0.2.6",
+    "request": "2.44.0"
+  },
+  "devDependencies": {
+    "jshint": "2.5.3",
+    "jscs": "1.5.9"
+  },
+  "scripts": {
+    "start": "bin/openbadges-server",
+    "test": "npm run lint",
+    "lint": "jshint . && jscs -c .jscs.js ."
+  }
+}
