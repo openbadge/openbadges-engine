@@ -1,0 +1,14 @@
+{
+  "author": "Evgeniy Gavryushin",
+  "name": "openbadges-forms",
+  "email": "job.egavr@yandex.ru",
+  "version": "0.0.0",
+  "ignore": [
+    ".enb/tmp",
+    "node_modules",
+    "libs"
+  ],
+  "dependencies": {
+    "bem-components": "3b41cd9d817f51b94bead414409a099913509299"
+  }
+}

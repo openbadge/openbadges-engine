@@ -1,0 +1,8 @@
+block('error')(
+    attrs()(function() {
+        var ctx = this.ctx;
+        return {
+            name : ctx.name
+        };
+    })
+);
