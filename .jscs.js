@@ -1,6 +1,9 @@
 module.exports = {
     excludeFiles: [
-        'node_modules/**'
+        '.enb/**',
+        'node_modules/**',
+        'libs/**',
+        'forms/desktop.bundles/**'
     ],
     requireSpaceAfterKeywords: ['if', 'else', 'for', 'while', 'do', 'switch', 'return', 'try', 'catch'],
     requireSpaceBeforeBlockStatements: true,

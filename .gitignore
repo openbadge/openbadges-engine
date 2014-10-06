@@ -1,2 +1,9 @@
 node_modules/
+badges/
 private-key.pem
+
+libs/
+.enb/tmp/
+forms/*.bundles*/*/*.*
+!forms/*.bundles*/*/*.bemjson.js
+!forms/*.bundles*/*/*.bemdecl.js
