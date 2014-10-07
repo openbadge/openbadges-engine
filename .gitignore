@@ -6,4 +6,3 @@ libs/
 .enb/tmp/
 forms/*.bundles*/*/*.*
 !forms/*.bundles*/*/*.bemjson.js
-!forms/*.bundles*/*/*.bemdecl.js

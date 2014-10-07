@@ -1,4 +1,4 @@
-modules.define('form', ['i-bem__dom', 'jquery', 'querystring', 'cookie'], function (provide, BEMDOM, $, qs, cookie) {
+modules.define('form', ['i-bem__dom', 'jquery', 'querystring'], function (provide, BEMDOM, $, qs) {
     provide(BEMDOM.decl(this.name, {
         onSetMod: {
             js: {

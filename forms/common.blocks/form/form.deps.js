@@ -1,3 +1,3 @@
 ({
-    shouldDeps: ['querystring', 'cookie', 'select']
+    shouldDeps: ['querystring']
 })

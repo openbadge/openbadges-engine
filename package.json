@@ -23,11 +23,11 @@
     "openbadges-server": "./bin/openbadges-server"
   },
   "dependencies": {
+    "openbadges-issuer-api": "https://github.com/eGavr/openbadges-issuer-api/archive/master.tar.gz",
     "express": "4.9.4",
     "serve-static": "1.1.0",
     "body-parser": "1.8.3",
     "formidable": "1.0.15",
-    "lodash": "2.4.1",
     "jws": "0.2.6",
     "request": "2.44.0",
     "is-png": "1.0.0"
