@@ -7,8 +7,8 @@
     "engine",
     "CMS"
   ],
-  "homepage": "https://github.com/eGavr/openbadges-engine",
-  "bugs": "https://github.com/eGavr/openbadges-engine/issues",
+  "homepage": "https://github.com/openbadge/openbadges-engine",
+  "bugs": "https://github.com/openbadge/openbadges-engine/issues",
   "author": {
     "name": "Evgeniy Gavryushin",
     "email": "job.egavr@yandex.ru",
@@ -16,14 +16,14 @@
   },
   "repository": {
     "type": "git",
-    "url": "git://github.com/eGavr/openbadges-engine.git"
+    "url": "git://github.com/openbadge/openbadges-engine.git"
   },
   "main": "lib/server.js",
   "bin": {
     "openbadges-server": "./bin/openbadges-server"
   },
   "dependencies": {
-    "openbadges-issuer-api": "https://github.com/eGavr/openbadges-issuer-api/archive/master.tar.gz",
+    "openbadges-issuer-api": "https://github.com/openbadge/openbadges-issuer-api/archive/master.tar.gz",
     "express": "4.9.4",
     "serve-static": "1.1.0",
     "body-parser": "1.8.3",
