@@ -1,4 +1,6 @@
 {
-  "repository": "",
+  "token" : "",
+  "user": "",
+  "repo": "",
   "gh-pages": ""
 }
