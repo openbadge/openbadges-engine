@@ -1,6 +1,6 @@
 ({
     block: 'page',
-    title: 'Badge Class',
+    title: 'Class',
     styles: [
         { elem: 'css', url: '/forms/desktop.bundles/class/_class.css' }
     ],
@@ -13,7 +13,7 @@
             tag: 'b',
             content: {
                 tag: 'p',
-                content: 'BADGE CLASS:'
+                content: 'Badge Class:'
             }
         },
         {
@@ -66,8 +66,8 @@
                             name: 'image',
                             id: 'id123',
                             mods: { theme: 'simple' },
-                            button: 'Выберите файл',
-                            noFileText: 'Файл не выбран'
+                            button: 'Choose a file',
+                            noFileText: 'Not chosen'
                         }
                     ]
                 },
@@ -104,6 +104,24 @@
                 {
                     block: 'spin',
                     mods: { theme: 'normal', size: 'l' }
+                },
+                { tag: 'br' },
+                { tag: 'br' },
+                { tag: 'br' },
+                '-------------------------------------',
+                { tag: 'br' },
+                {
+                    block : 'link',
+                    mods : { theme : 'normal' },
+                    url : '/manual-awarding',
+                    content : 'Reward Badges'
+                },
+                { tag: 'br' },
+                {
+                    block : 'link',
+                    mods : { theme : 'normal' },
+                    url : '/',
+                    content : 'Open Badges'
                 }
             ]
         }

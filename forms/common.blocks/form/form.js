@@ -4,10 +4,15 @@ modules.define('form', ['i-bem__dom', 'jquery', 'querystring'], function (provid
             js: {
                 inited: function () {
                     this.bindTo('submit', function (e) {
-                        var buttons = this.findBlocksInside('button');
+                        var buttons = this.findBlocksInside('button'),
+                            links = this.findBlocksInside('link');
 
                         buttons[buttons.length - 1].setMod('disabled');
                         this.findBlockInside('spin').setMod('progress');
+
+                        links.forEach(function (link) {
+                            link.setMod('disabled');
+                        });
 
                         var isError = false,
                             formVals = qs.parse(this.domElem.serialize()),
@@ -37,6 +42,10 @@ modules.define('form', ['i-bem__dom', 'jquery', 'querystring'], function (provid
                             e.preventDefault();
                             this.findBlockInside('spin').delMod('progress');
                             buttons[buttons.length - 1].delMod('disabled');
+
+                            links.forEach(function (link) {
+                                link.delMod('disabled');
+                            });
                         }
                     });
                 }

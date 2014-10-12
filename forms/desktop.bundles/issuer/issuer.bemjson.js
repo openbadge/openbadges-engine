@@ -13,7 +13,7 @@
             tag: 'b',
             content: {
                 tag: 'p',
-                content: 'ISSUER:'
+                content: 'Issuer:'
             }
         },
         {
@@ -84,8 +84,8 @@
                             name: 'image',
                             id: 'id123',
                             mods: { theme: 'simple' },
-                            button: 'Выберите файл',
-                            noFileText: 'Файл не выбран'
+                            button: 'Choose a file',
+                            noFileText: 'Not chosen'
                         }
                     ]
                 },

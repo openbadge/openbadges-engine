@@ -13,7 +13,7 @@
             tag: 'b',
             content: {
                 tag: 'p',
-                content: 'AWARDING:'
+                content: 'Awarding:'
             }
         },
         {
@@ -63,6 +63,24 @@
                 {
                     block: 'spin',
                     mods: { theme: 'normal', size: 'l' }
+                },
+                { tag: 'br' },
+                { tag: 'br' },
+                { tag: 'br' },
+                '-------------------------------------',
+                { tag: 'br' },
+                {
+                    block : 'link',
+                    mods : { theme : 'normal' },
+                    url : '/class',
+                    content : 'Create Classes'
+                },
+                { tag: 'br' },
+                {
+                    block : 'link',
+                    mods : { theme : 'normal' },
+                    url : '/',
+                    content : 'Open Badges'
                 }
             ]
         }
