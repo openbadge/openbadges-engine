@@ -7,6 +7,9 @@
     scripts: [
         { elem: 'js', url: '/forms/desktop.bundles/class/_class.js' },
     ],
+    mods: {
+        theme: 'normal'
+    },
     content: [
         {
             block: 'header',
@@ -108,7 +111,7 @@
                 { tag: 'br' },
                 { tag: 'br' },
                 { tag: 'br' },
-                '-------------------------------------',
+                '----------------------',
                 { tag: 'br' },
                 {
                     block : 'link',

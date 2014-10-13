@@ -19,7 +19,10 @@ modules.define('form', ['i-bem__dom', 'jquery', 'querystring'], function (provid
                             attach = this.findBlockInside('attach'),
                             errors = this.findBlocksInside('error');
 
-                        if (attach && !attach.elem('control').val()) { isError = true; }
+                        if (attach && !attach.elem('control').val()) {
+                            attach.setMod('error');
+                            isError = true;
+                        }
 
                         Object.keys(formVals).forEach(function (val) {
                             if (formVals[val] === '') {

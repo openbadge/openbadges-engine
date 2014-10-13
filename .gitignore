@@ -5,3 +5,4 @@ libs/
 .enb/tmp/
 forms/*.bundles*/*/*.*
 !forms/*.bundles*/*/*.bemjson.js
+!forms/*.bundles*/badge/*.bemdecl.js

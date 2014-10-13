@@ -29,12 +29,28 @@ var tech = {
 };
 
 module.exports = function(config) {
+    config.nodes('forms/*.bundles/badge', function(nodeConfig) {
+        nodeConfig.addTechs([
+            [tech.fileProvider, { target: '?.bemdecl.js' }],
+        ]);
+
+        nodeConfig.addTargets([/* '?.bemtree.js', */ '?.bemhtml.js']);
+    });
+
+    config.nodes(['forms/*.bundles/class', 'forms/*.bundles/issuer', 'forms/*.bundles/index'], function(nodeConfig) {
+        nodeConfig.addTechs([
+            [tech.fileProvider, { target: '?.bemjson.js' }],
+            [tech.bemdeclFromBemjson],
+            [tech.htmlFromBemjson]
+        ]);
+
+        nodeConfig.addTargets([/* '?.bemtree.js', */ '?.html']);
+    });
+
     config.nodes('forms/*.bundles/*', function(nodeConfig) {
         nodeConfig.addTechs([
             // essential
             [tech.levels, { levels: getLevels(config) }],
-            [tech.fileProvider, { target: '?.bemjson.js' }],
-            [tech.bemdeclFromBemjson],
             [tech.deps],
             [tech.files],
 
@@ -51,7 +67,6 @@ module.exports = function(config) {
 
             // bemhtml
             [tech.bemhtml, { devMode: process.env.YENV === 'development' }],
-            [tech.htmlFromBemjson],
 
             // client bemhtml
             [tech.bemdeclFromDepsByTech, {
@@ -83,7 +98,7 @@ module.exports = function(config) {
             [tech.prependYm, { source: '?.pre.js' }]
         ]);
 
-        nodeConfig.addTargets([/* '?.bemtree.js', */ '?.html', '_?.css', '_?.js']);
+        nodeConfig.addTargets([/* '?.bemtree.js', */ '_?.css', '_?.js']);
 
         nodeConfig.mode('development', function() {
             nodeConfig.addTechs([

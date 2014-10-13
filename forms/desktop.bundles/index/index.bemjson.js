@@ -7,6 +7,9 @@
     scripts: [
         { elem: 'js', url: '/forms/desktop.bundles/index/_index.js' }
     ],
+    mods: {
+        theme: 'normal'
+    },
     content: [
         {
             block: 'header',

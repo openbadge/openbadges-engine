@@ -7,6 +7,9 @@
     scripts: [
         { elem: 'js', url: '/forms/desktop.bundles/issuer/_issuer.js' },
     ],
+    mods: {
+        theme: 'normal'
+    },
     content: [
         {
             block: 'header',
