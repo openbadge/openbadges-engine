@@ -30,7 +30,10 @@
     "formidable": "1.0.15",
     "jws": "0.2.6",
     "request": "2.44.0",
-    "is-png": "1.0.0"
+    "is-png": "1.0.0",
+    "passport": "^0.2.1",
+    "passport-local": "^1.0.0",
+    "express-session": "^1.8.2"
   },
   "devDependencies": {
     "jshint": "2.5.3",

@@ -37,7 +37,12 @@ module.exports = function(config) {
         nodeConfig.addTargets([/* '?.bemtree.js', */ '?.bemhtml.js']);
     });
 
-    config.nodes(['forms/*.bundles/class', 'forms/*.bundles/issuer', 'forms/*.bundles/index'], function(nodeConfig) {
+    config.nodes([
+            'forms/*.bundles/class',
+            'forms/*.bundles/issuer',
+            'forms/*.bundles/index',
+            'forms/*.bundles/auth'
+        ], function(nodeConfig) {
         nodeConfig.addTechs([
             [tech.fileProvider, { target: '?.bemjson.js' }],
             [tech.bemdeclFromBemjson],

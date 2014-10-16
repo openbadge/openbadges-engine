@@ -1,4 +1,10 @@
 {
-  "token" : "",
-  "repo": ""
+  "admin": {
+    "username": "",
+    "password": ""
+  },
+  "badgesStorage": {
+    "token" : "",
+    "repo": ""
+  }
 }
