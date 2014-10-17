@@ -209,19 +209,6 @@ exports.blocks = [
         ]
     },
     {
-        "name": "spin",
-        "mods": [
-            {
-                "name": "size",
-                "vals": [
-                    {
-                        "name": "l"
-                    }
-                ]
-            }
-        ]
-    },
-    {
         "name": "link"
     },
     {

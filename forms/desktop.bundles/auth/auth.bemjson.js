@@ -14,10 +14,12 @@
         {
             block: 'header',
             tag: 'b',
-            content: {
-                tag: 'p',
-                content: 'Authorization'
-            }
+            content: [
+                {
+                    tag: 'p',
+                    content: 'Authorization'
+                }
+            ]
         },
         {
             block: 'form',
@@ -65,12 +67,12 @@
                 {
                     block: 'button',
                     text: 'Sign In',
-                    mods: { type: 'submit', theme: 'normal', size: 'l', view: 'action' }
+                    mods: { type: 'submit', theme: 'normal', size: 'm', view: 'action' }
                 },
                 ' ',
                 {
                     block: 'spin',
-                    mods: { theme: 'normal', size: 'l' }
+                    mods: { theme: 'normal', size: 'm' }
                 }
             ]
         }

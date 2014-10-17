@@ -12,6 +12,12 @@
     },
     content: [
         {
+            block : 'link',
+            mods : { theme : 'normal' },
+            url : '/',
+            content : '<– Open Badges'
+        },
+        {
             block: 'header',
             tag: 'b',
             content: {
@@ -37,7 +43,6 @@
                         {
                             block: 'error',
                             name: 'name',
-                            id: 1,
                             mods: { disabled: true },
                             content: 'Fill this field!'
                         },
@@ -67,7 +72,6 @@
                         {
                             block: 'attach',
                             name: 'image',
-                            id: 'id123',
                             mods: { theme: 'simple' },
                             button: 'Choose a file',
                             noFileText: 'Not chosen'
@@ -99,34 +103,23 @@
                     mods: {
                         type: 'submit',
                         theme: 'normal',
-                        size: 'l',
+                        size: 'm',
                         view: 'action'
                     }
                 },
                 ' ',
                 {
                     block: 'spin',
-                    mods: { theme: 'normal', size: 'l' }
-                },
-                { tag: 'br' },
-                { tag: 'br' },
-                { tag: 'br' },
-                '----------------------',
-                { tag: 'br' },
-                {
-                    block : 'link',
-                    mods : { theme : 'normal' },
-                    url : '/manual-awarding',
-                    content : 'Reward Badges'
-                },
-                { tag: 'br' },
-                {
-                    block : 'link',
-                    mods : { theme : 'normal' },
-                    url : '/',
-                    content : 'Open Badges'
+                    mods: { theme: 'normal', size: 'm' }
                 }
             ]
+        },
+        { tag: 'br' },
+        {
+            block : 'link',
+            mods : { theme : 'normal' },
+            url : '/manual-awarding',
+            content : 'Reward Badges –>'
         }
     ]
 });

@@ -42,6 +42,13 @@
                     content : 'Reward Badges'
                 }
             ]
+        },
+        { tag: 'br' },
+        {
+            block: 'button',
+            url : '/sign-out',
+            text: 'Sign out',
+            mods: { type: 'link', theme: 'normal', size: 'm', view: 'action' }
         }
     ]
 });
