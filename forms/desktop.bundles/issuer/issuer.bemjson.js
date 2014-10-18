@@ -12,18 +12,14 @@
     },
     content: [
         {
-            block : 'link',
-            mods : { theme : 'normal' },
-            url : '/',
-            content : '<– Open Badges'
-        },
-        {
-            block: 'header',
-            tag: 'b',
-            content: {
-                tag: 'p',
-                content: 'Issuer:'
-            }
+            content: [
+                {
+                    block : 'link',
+                    mods : { theme : 'normal' },
+                    url : '/',
+                    content : 'Open Badges'
+                }
+            ]
         },
         {
             block: 'form',
@@ -31,6 +27,12 @@
             method: 'post',
             enctype: 'multipart/form-data',
             content: [
+                {
+                    tag: 'b',
+                    content: 'Issuer:'
+                },
+                { tag: 'br' },
+                { tag: 'br' },
                 {
                     content: [
                         {

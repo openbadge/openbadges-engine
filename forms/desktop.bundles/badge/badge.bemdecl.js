@@ -32,9 +32,6 @@ exports.blocks = [
         ]
     },
     {
-        "name": "header"
-    },
-    {
         "name": "form"
     },
     {

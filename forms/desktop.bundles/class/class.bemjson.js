@@ -12,18 +12,21 @@
     },
     content: [
         {
-            block : 'link',
-            mods : { theme : 'normal' },
-            url : '/',
-            content : '<– Open Badges'
-        },
-        {
-            block: 'header',
-            tag: 'b',
-            content: {
-                tag: 'p',
-                content: 'Badge Class:'
-            }
+            content: [
+                {
+                    block : 'link',
+                    mods : { theme : 'normal' },
+                    url : '/',
+                    content : 'Open Badges'
+                },
+                { tag: 'br' },
+                {
+                    block : 'link',
+                    mods : { theme : 'normal' },
+                    url : '/manual-awarding',
+                    content : 'Reward Badges'
+                }
+            ]
         },
         {
             block: 'form',
@@ -31,6 +34,12 @@
             method: 'post',
             enctype: 'multipart/form-data',
             content: [
+                {
+                    tag: 'b',
+                    content: 'Class:'
+                },
+                { tag: 'br' },
+                { tag: 'br' },
                 {
                     content: [
                         {
@@ -114,12 +123,6 @@
                 }
             ]
         },
-        { tag: 'br' },
-        {
-            block : 'link',
-            mods : { theme : 'normal' },
-            url : '/manual-awarding',
-            content : 'Reward Badges –>'
-        }
+        { tag: 'br' }
     ]
 });

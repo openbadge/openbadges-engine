@@ -12,20 +12,16 @@
     },
     content: [
         {
-            block: 'header',
-            tag: 'b',
-            content: [
-                {
-                    tag: 'p',
-                    content: 'Authorization'
-                }
-            ]
-        },
-        {
             block: 'form',
             action: '/auth',
             method: 'post',
             content: [
+                {
+                    tag: 'b',
+                    content: 'Authorization:'
+                },
+                { tag: 'br' },
+                { tag: 'br' },
                 {
                     content: [
                         {
