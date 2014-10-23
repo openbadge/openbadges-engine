@@ -1,6 +1,6 @@
 module.exports = {
     excludeFiles: [
-        '.enb/',
+        '.enb/tmp',
         'node_modules/',
         'libs/',
         'static/',

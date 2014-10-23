@@ -1,7 +1,7 @@
 node_modules/
 libs/
 
-.enb/
+.enb/tmp/
 static/
 forms/*.blocks/*/*.deps.js
 forms/*.bundles/*

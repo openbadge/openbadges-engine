@@ -28,12 +28,12 @@ var tech = {
     htmlFromBemjson: require('enb-bemxjst/techs/html-from-bemjson')
 };
 
-module.exports = function(config) {
+module.exports = function (config) {
     config.nodes([
             'forms/*.bundles/badge',
             'forms/*.bundles/index',
             'forms/*.bundles/class'
-        ], function(nodeConfig) {
+        ], function (nodeConfig) {
         nodeConfig.addTechs([
             [tech.fileProvider, { target: '?.bemdecl.js' }],
         ]);
@@ -44,7 +44,7 @@ module.exports = function(config) {
     config.nodes([
             'forms/*.bundles/issuer',
             'forms/*.bundles/auth'
-        ], function(nodeConfig) {
+        ], function (nodeConfig) {
         nodeConfig.addTechs([
             [tech.fileProvider, { target: '?.bemjson.js' }],
             [tech.bemdeclFromBemjson],
@@ -54,7 +54,7 @@ module.exports = function(config) {
         nodeConfig.addTargets([/* '?.bemtree.js', */ '?.html']);
     });
 
-    config.nodes('forms/*.bundles/*', function(nodeConfig) {
+    config.nodes('forms/*.bundles/*', function (nodeConfig) {
         nodeConfig.addTechs([
             // essential
             [tech.levels, { levels: getLevels(config) }],
@@ -109,7 +109,7 @@ module.exports = function(config) {
 
         nodeConfig.addTechs([
             [tech.borschik, { sourceTarget: '?.js', destTarget: '_?.js', freeze:true }],
-            [tech.borschik, { sourceTarget: '?.css', destTarget: '_?.css', freeze: true}]
+            [tech.borschik, { sourceTarget: '?.css', destTarget: '_?.css', tech: 'cleancss', freeze: true }]
         ]);
     });
 };
@@ -124,7 +124,7 @@ function getLevels(config) {
             { path: 'libs/bem-components/design/desktop.blocks', check: false },
             'forms/common.blocks'
         ]
-        .map(function(level) {
+        .map(function (level) {
             return config.resolvePath(level);
         });
 }
