@@ -1,11 +1,8 @@
 .form {
-    padding: 10px;
-    background: #fff;
     width: 280px;
-    -moz-box-shadow: 0 0 10px rgba(0, 0, 0, 0.5);
-    -webkit-box-shadow: 0 0 10px rgba(0, 0, 0, 0.5);
+    margin: 1em 0 0 1em;
+    padding: 10px;
+
+    background: #fff;
     box-shadow: 0 0 10px rgba(0, 0, 0, 0.5);
-    display: block;
-    margin-top: 1em;
-    margin-left: 1em;
 }

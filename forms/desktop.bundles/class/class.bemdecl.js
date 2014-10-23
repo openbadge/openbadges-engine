@@ -32,7 +32,7 @@ exports.blocks = [
         ]
     },
     {
-        "name": "award"
+        "name": "class"
     },
     {
         "name": "link"
@@ -112,42 +112,16 @@ exports.blocks = [
         ]
     },
     {
-        "name": "select"
+        "name": "attach"
     },
     {
-        "name": "select",
-        "mods": [
-            {
-                "name": "mode",
-                "vals": [
-                    {
-                        "name": "radio"
-                    }
-                ]
-            }
-        ]
-    },
-    {
-        "name": "select",
+        "name": "attach",
         "mods": [
             {
                 "name": "theme",
                 "vals": [
                     {
-                        "name": "normal"
-                    }
-                ]
-            }
-        ]
-    },
-    {
-        "name": "select",
-        "mods": [
-            {
-                "name": "size",
-                "vals": [
-                    {
-                        "name": "m"
+                        "name": "simple"
                     }
                 ]
             }

@@ -1,25 +1,25 @@
-modules.define('form', ['i-bem__dom', 'jquery', 'querystring'], function (provide, BEMDOM, $, qs) {
+modules.define('issuer', ['i-bem__dom', 'jquery', 'querystring'], function (provide, BEMDOM, $, qs) {
     provide(BEMDOM.decl(this.name, {
         onSetMod: {
             js: {
                 inited: function () {
                     this.bindTo('submit', function (e) {
                         var buttons = this.findBlocksInside('button'),
-                            links = this.findBlocksInside('link');
+                            submitButton = buttons[buttons.length - 1],
+                            spin = this.findBlockInside('spin'),
+                            attach = this.findBlockInside('attach'),
+                            errors = this.findBlocksInside('error'),
+                            link = this.findBlockInside('link'),
+                            form = this.findBlockInside('form');
 
-                        buttons[buttons.length - 1].setMod('disabled');
-                        this.findBlockInside('spin').setMod('progress');
-
-                        links.forEach(function (link) {
-                            link.setMod('disabled');
-                        });
+                        link.setMod('disabled');
+                        submitButton.setMod('disabled');
+                        spin.setMod('progress');
 
                         var isError = false,
-                            formVals = qs.parse(this.domElem.serialize()),
-                            attach = this.findBlockInside('attach'),
-                            errors = this.findBlocksInside('error');
+                            formVals = qs.parse(form.domElem.serialize());
 
-                        if (attach && !attach.elem('control').val()) {
+                        if (!attach.elem('control').val()) {
                             attach.setMod('error');
                             isError = true;
                         }
@@ -43,12 +43,9 @@ modules.define('form', ['i-bem__dom', 'jquery', 'querystring'], function (provid
 
                         if (isError) {
                             e.preventDefault();
-                            this.findBlockInside('spin').delMod('progress');
-                            buttons[buttons.length - 1].delMod('disabled');
-
-                            links.forEach(function (link) {
-                                link.delMod('disabled');
-                            });
+                            link.delMod('disabled');
+                            submitButton.delMod('disabled');
+                            spin.delMod('progress');
                         }
                     });
                 }

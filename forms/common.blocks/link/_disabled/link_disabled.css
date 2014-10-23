@@ -1,0 +1,5 @@
+.link_theme_normal.link_disabled,
+.link_theme_normal.link_disabled:hover
+{
+    color: #909090;
+}
