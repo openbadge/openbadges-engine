@@ -20,7 +20,7 @@
   },
   "main": "lib/server.js",
   "bin": {
-    "openbadges-server": "./bin/openbadges-server"
+    "openbadges": "./bin/openbadges"
   },
   "dependencies": {
     "openbadges-issuer-api": "https://github.com/openbadge/openbadges-issuer-api/archive/master.tar.gz",
@@ -54,7 +54,7 @@
     "ym": "0.1.0"
   },
   "scripts": {
-    "start": "bin/openbadges-server",
+    "start": "bin/openbadges",
     "test": "npm run lint",
     "lint": "jshint . && jscs -c .jscs.js .",
     "postinstall": "bower-npm-install",
