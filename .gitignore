@@ -1,8 +1,11 @@
 node_modules/
 private-key.pem
 
-libs/
 .enb/tmp/
+libs/
+
 forms/*.bundles*/*/*.*
 !forms/*.bundles*/*/*.bemjson.js
+!forms/*.bundles*/index/*.bemdecl.js
+!forms/*.bundles*/class/*.bemdecl.js
 !forms/*.bundles*/badge/*.bemdecl.js
