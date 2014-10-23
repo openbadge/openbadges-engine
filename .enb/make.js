@@ -29,7 +29,11 @@ var tech = {
 };
 
 module.exports = function(config) {
-    config.nodes('forms/*.bundles/badge', function(nodeConfig) {
+    config.nodes([
+            'forms/*.bundles/badge',
+            'forms/*.bundles/index',
+            'forms/*.bundles/class'
+        ], function(nodeConfig) {
         nodeConfig.addTechs([
             [tech.fileProvider, { target: '?.bemdecl.js' }],
         ]);
@@ -38,9 +42,7 @@ module.exports = function(config) {
     });
 
     config.nodes([
-            'forms/*.bundles/class',
             'forms/*.bundles/issuer',
-            'forms/*.bundles/index',
             'forms/*.bundles/auth'
         ], function(nodeConfig) {
         nodeConfig.addTechs([
@@ -105,19 +107,10 @@ module.exports = function(config) {
 
         nodeConfig.addTargets([/* '?.bemtree.js', */ '_?.css', '_?.js']);
 
-        nodeConfig.mode('development', function() {
-            nodeConfig.addTechs([
-                [tech.fileCopy, { sourceTarget: '?.js', destTarget: '_?.js' }],
-                [tech.fileCopy, { sourceTarget: '?.css', destTarget: '_?.css' }]
-            ]);
-        });
-
-        nodeConfig.mode('production', function() {
-            nodeConfig.addTechs([
-                [tech.borschik, { sourceTarget: '?.js', destTarget: '_?.js' }],
-                [tech.borschik, { sourceTarget: '?.css', destTarget: '_?.css', tech: 'cleancss' }]
-            ]);
-        });
+        nodeConfig.addTechs([
+            [tech.borschik, { sourceTarget: '?.js', destTarget: '_?.js', freeze:true }],
+            [tech.borschik, { sourceTarget: '?.css', destTarget: '_?.css', freeze: true}]
+        ]);
     });
 };
 
