@@ -1,9 +1,10 @@
 module.exports = {
     excludeFiles: [
-        '.enb/**',
-        'node_modules/**',
-        'libs/**',
-        'forms/desktop.bundles/**'
+        '.enb/',
+        'node_modules/',
+        'libs/',
+        'static/',
+        'forms/*.bundles/*/*.bemdecl.js'
     ],
     requireSpaceAfterKeywords: ['if', 'else', 'for', 'while', 'do', 'switch', 'return', 'try', 'catch'],
     requireSpaceBeforeBlockStatements: true,

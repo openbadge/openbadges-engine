@@ -1,4 +1,7 @@
-.enb/
 node_modules/
 libs/
-forms/
+
+.enb/
+static/
+forms/*.blocks/*/*.deps.js
+forms/*.bundles/*
