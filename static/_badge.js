@@ -1,0 +1,1 @@
+../forms/desktop.bundles/badge/_badge.js

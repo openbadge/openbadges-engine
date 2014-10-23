@@ -1,0 +1,1 @@
+../forms/desktop.bundles/class/_class.js
