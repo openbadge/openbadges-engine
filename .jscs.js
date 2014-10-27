@@ -4,7 +4,7 @@ module.exports = {
         'node_modules/',
         'libs/',
         'static/',
-        'forms/*.bundles/*/*.bemdecl.js'
+        'forms/*.bundles/*/'
     ],
     requireSpaceAfterKeywords: ['if', 'else', 'for', 'while', 'do', 'switch', 'return', 'try', 'catch'],
     requireSpaceBeforeBlockStatements: true,

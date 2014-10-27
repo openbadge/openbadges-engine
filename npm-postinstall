@@ -1,0 +1,5 @@
+#!/usr/bin/env sh
+
+bower-npm-install --non-interactive
+enb make clean
+enb make
