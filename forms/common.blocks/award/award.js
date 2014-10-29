@@ -8,12 +8,12 @@ modules.define('award', ['i-bem__dom', 'jquery', 'querystring'], function (provi
                             submitButton = buttons[buttons.length - 1],
                             spin = this.findBlockInside('spin'),
                             error = this.findBlockInside('error'),
-                            links = this.findBlocksInside('link'),
+                        //    links = this.findBlocksInside('link'),
                             form = this.findBlockInside('form');
 
-                        links.forEach(function (link) {
-                            link.setMod('disabled');
-                        });
+                        //links.forEach(function (link) {
+                        //    link.setMod('disabled');
+                        //});
                         submitButton.setMod('disabled');
                         spin.setMod('progress');
 
@@ -22,9 +22,9 @@ modules.define('award', ['i-bem__dom', 'jquery', 'querystring'], function (provi
                             error.delMod('disabled');
                             spin.delMod('progress');
                             submitButton.delMod('disabled');
-                            links.forEach(function (link) {
-                                link.delMod('disabled');
-                            });
+                            //links.forEach(function (link) {
+                            //    link.delMod('disabled');
+                            //});
                         }
                     });
                 }

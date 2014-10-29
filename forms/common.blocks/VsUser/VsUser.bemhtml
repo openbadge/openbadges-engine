@@ -1,0 +1,10 @@
+block('VsUser')(
+    js()(true),
+    content()(function(){
+        return {
+            block : 'image',
+            mix : { block : 'VsUser', elem : 'avatar' },
+            url : this.ctx.avatar
+        };
+    })
+);

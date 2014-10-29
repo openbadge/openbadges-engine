@@ -45,7 +45,7 @@
                 {
                     block: 'button',
                     text: 'Sign In',
-                    mods: { type: 'submit', theme: 'normal', size: 'm', view: 'action' }
+                    mods: { type: 'submit', theme: 'normal', size: 'xl', view: 'action' }
                 },
                 ' ',
                 {

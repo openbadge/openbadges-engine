@@ -1,0 +1,4 @@
+block('VsHeadMenu')(
+    tag()('menu'),
+    mix()({ block : 'VsStackedLayout' })
+);

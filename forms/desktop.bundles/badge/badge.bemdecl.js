@@ -32,13 +32,104 @@ exports.blocks = [
         ]
     },
     {
-        "name": "award"
+        "name": "VsHead"
     },
     {
-        "name": "link"
+        "name": "VsHeadMenu"
     },
     {
-        "name": "link",
+        "name": "VsHeadMenu",
+        "elems": [
+            {
+                "name": "item"
+            }
+        ]
+    },
+    {
+        "name": "VsHeadMenu",
+        "elems": [
+            {
+                "name": "item",
+                "mods": [
+                    {
+                        "name": "disabled",
+                        "vals": [
+                            {
+                                "name": true
+                            }
+                        ]
+                    }
+                ]
+            }
+        ]
+    },
+    {
+        "name": "VsHeadMenu",
+        "elems": [
+            {
+                "name": "item",
+                "mods": [
+                    {
+                        "name": "disabled"
+                    }
+                ]
+            }
+        ]
+    },
+    {
+        "name": "VsHeadMenu",
+        "elems": [
+            {
+                "name": "item",
+                "mods": [
+                    {
+                        "name": "hit",
+                        "vals": [
+                            {
+                                "name": true
+                            }
+                        ]
+                    }
+                ]
+            }
+        ]
+    },
+    {
+        "name": "VsHeadMenu",
+        "elems": [
+            {
+                "name": "item",
+                "mods": [
+                    {
+                        "name": "current",
+                        "vals": [
+                            {
+                                "name": true
+                            }
+                        ]
+                    }
+                ]
+            }
+        ]
+    },
+    {
+        "name": "button"
+    },
+    {
+        "name": "button",
+        "mods": [
+            {
+                "name": "type",
+                "vals": [
+                    {
+                        "name": "link"
+                    }
+                ]
+            }
+        ]
+    },
+    {
+        "name": "button",
         "mods": [
             {
                 "name": "theme",
@@ -49,6 +140,35 @@ exports.blocks = [
                 ]
             }
         ]
+    },
+    {
+        "name": "button",
+        "mods": [
+            {
+                "name": "size",
+                "vals": [
+                    {
+                        "name": "m"
+                    }
+                ]
+            }
+        ]
+    },
+    {
+        "name": "button",
+        "mods": [
+            {
+                "name": "view",
+                "vals": [
+                    {
+                        "name": "action"
+                    }
+                ]
+            }
+        ]
+    },
+    {
+        "name": "award"
     },
     {
         "name": "form"
@@ -154,9 +274,6 @@ exports.blocks = [
         ]
     },
     {
-        "name": "button"
-    },
-    {
         "name": "button",
         "mods": [
             {
@@ -164,45 +281,6 @@ exports.blocks = [
                 "vals": [
                     {
                         "name": "submit"
-                    }
-                ]
-            }
-        ]
-    },
-    {
-        "name": "button",
-        "mods": [
-            {
-                "name": "theme",
-                "vals": [
-                    {
-                        "name": "normal"
-                    }
-                ]
-            }
-        ]
-    },
-    {
-        "name": "button",
-        "mods": [
-            {
-                "name": "size",
-                "vals": [
-                    {
-                        "name": "m"
-                    }
-                ]
-            }
-        ]
-    },
-    {
-        "name": "button",
-        "mods": [
-            {
-                "name": "view",
-                "vals": [
-                    {
-                        "name": "action"
                     }
                 ]
             }
@@ -236,5 +314,8 @@ exports.blocks = [
                 ]
             }
         ]
+    },
+    {
+        "name": "VsFoot"
     }
 ];

@@ -6,17 +6,17 @@ modules.define('class', ['i-bem__dom', 'jquery', 'querystring'], function (provi
                     this.bindTo('submit', function (e) {
                         var _this = this;
 
-                        var links = this.findBlocksInside('link'),
-                            buttons = this.findBlocksInside('button'),
+                        //var links = this.findBlocksInside('link'),
+                        var buttons = this.findBlocksInside('button'),
                             submitButton = buttons[buttons.length - 1],
                             spin = this.findBlockInside('spin');
 
                         if (this.checkedOnErrors) {
                             submitButton.setMod('disabled');
                             spin.setMod('progress');
-                            links.forEach(function (link) {
-                                link.setMod('disabled');
-                            });
+                            //links.forEach(function (link) {
+                            //    link.setMod('disabled');
+                            //});
                             return;
                         }
 

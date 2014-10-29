@@ -1,0 +1,33 @@
+block('VsFoot')(
+    mix()({ block : 'VsStackedLayout' }),
+    tag()('footer'),
+    content()(function() {
+        var ctx = this.ctx;
+
+        return [
+            {
+                block : 'VsStackedLayout',
+                elem : 'item',
+                content : 'ß-version'
+            },
+            {
+                block : 'link',
+                mods : { theme : 'normal' },
+                mix : [
+                    { block : 'VsStackedLayout', elem : 'item' },
+                    { block : ctx.block, elem : 'nda' }
+                ],
+                url : 'http://openbadges.org/',
+                content : 'Mozilla Open Badges'
+            },
+            {
+                block : 'VsCopyright',
+                mix : [
+                    { block : 'VsStackedLayout', elem : 'item' },
+                    { block : ctx.block, elem : 'copyright' }
+                ]
+            }
+        ]
+    })
+)
+

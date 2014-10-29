@@ -1,0 +1,25 @@
+block('VsHeadMenu').elem('item').match(function(){return !(this.ctx.mods && this.ctx.mods.current)})(
+    tag()(false),
+    content()(function(){
+        var ctx = this.ctx,
+            mods = ctx.mods,
+            content = ctx.content,
+            item = {
+                block : 'VsHeadMenu',
+                elem : 'item',
+                mods : mods
+            };
+       // console.log(mods.disabled);
+        return {
+            block : 'VsStackedLayout',
+            elem : 'item',
+            content : {
+                block : 'link',
+                mods : { disabled : mods.disabled },
+                mix : item,
+                url : ctx.url,
+                content : content
+            }
+        };
+    })
+);

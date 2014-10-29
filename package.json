@@ -49,7 +49,9 @@
     "enb-modules": "0.2.0",
     "enb-stylus": "1.1.2",
     "stylus": "0.47.1",
-    "ym": "0.1.0"
+    "ym": "0.1.0",
+    "bh": "^3.1.4",
+    "enb-bh": "^0.2.3"
   },
   "devDependencies": {
     "jshint": "2.5.3",
