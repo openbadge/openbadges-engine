@@ -4,27 +4,33 @@ modules.define('award', ['i-bem__dom', 'jquery', 'querystring'], function (provi
             js: {
                 inited: function () {
                     this.bindTo('submit', function (e) {
+                        e.preventDefault();
                         var buttons = this.findBlocksInside('button'),
                             submitButton = buttons[buttons.length - 1],
                             spin = this.findBlockInside('spin'),
                             error = this.findBlockInside('error'),
-                        //    links = this.findBlocksInside('link'),
                             form = this.findBlockInside('form');
 
-                        //links.forEach(function (link) {
-                        //    link.setMod('disabled');
-                        //});
+                        error.setMod('disabled');
+
+                        var formVals = qs.parse(form.domElem.serialize());
+                        var awardUrl = this.findBlockInside('awardUrl');
+
                         submitButton.setMod('disabled');
                         spin.setMod('progress');
+                        $(awardUrl.domElem).text('');
 
-                        if (qs.parse(form.domElem.serialize()).email === '') {
-                            e.preventDefault();
+                        if (formVals.email === '') {
                             error.delMod('disabled');
                             spin.delMod('progress');
                             submitButton.delMod('disabled');
-                            //links.forEach(function (link) {
-                            //    link.delMod('disabled');
-                            //});
+                        } else {
+                            console.log(formVals);
+                            $.post('/manual-awarding', formVals, function (data) {
+                                spin.delMod('progress');
+                                submitButton.delMod('disabled');
+                                $(awardUrl.domElem).text(data);
+                            });
                         }
                     });
                 }

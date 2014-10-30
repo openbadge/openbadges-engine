@@ -316,6 +316,9 @@ exports.blocks = [
         ]
     },
     {
+        "name": "awardUrl"
+    },
+    {
         "name": "VsFoot"
     }
 ];

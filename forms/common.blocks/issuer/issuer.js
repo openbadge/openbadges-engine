@@ -9,10 +9,8 @@ modules.define('issuer', ['i-bem__dom', 'jquery', 'querystring'], function (prov
                             spin = this.findBlockInside('spin'),
                             attach = this.findBlockInside('attach'),
                             errors = this.findBlocksInside('error'),
-                         //   link = this.findBlockInside('link'),
                             form = this.findBlockInside('form');
 
-                        //link.setMod('disabled');
                         submitButton.setMod('disabled');
                         spin.setMod('progress');
 
@@ -43,7 +41,6 @@ modules.define('issuer', ['i-bem__dom', 'jquery', 'querystring'], function (prov
 
                         if (isError) {
                             e.preventDefault();
-                            //link.delMod('disabled');
                             submitButton.delMod('disabled');
                             spin.delMod('progress');
                         }
