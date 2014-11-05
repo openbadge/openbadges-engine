@@ -148,7 +148,7 @@ exports.blocks = [
                 "name": "size",
                 "vals": [
                     {
-                        "name": "m"
+                        "name": "xl"
                     }
                 ]
             }
@@ -172,6 +172,9 @@ exports.blocks = [
     },
     {
         "name": "form"
+    },
+    {
+        "name": "label"
     },
     {
         "name": "input"
@@ -281,6 +284,19 @@ exports.blocks = [
                 "vals": [
                     {
                         "name": "submit"
+                    }
+                ]
+            }
+        ]
+    },
+    {
+        "name": "button",
+        "mods": [
+            {
+                "name": "size",
+                "vals": [
+                    {
+                        "name": "m"
                     }
                 ]
             }

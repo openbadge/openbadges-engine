@@ -54,19 +54,16 @@
                     enctype: 'multipart/form-data',
                     content: [
                         {
-                            content: {
-                                tag: 'b',
-                                content: 'Issuer:'
-                            }
-                        },
-                        { tag: 'br' },
-                        {
                             content: [
+                                {
+                                    block: 'label',
+                                    content: 'Name'
+                                },
                                 {
                                     block: 'input',
                                     name: 'name',
                                     mods: { theme: 'normal', size: 'm', 'has-clear': true },
-                                    placeholder: 'Name...'
+                                    placeholder: 'any string you like...'
                                 },
                                 ' ',
                                 {
@@ -81,10 +78,14 @@
                         {
                             content: [
                                 {
+                                    block: 'label',
+                                    content: 'URL'
+                                },
+                                {
                                     block: 'input',
                                     name: 'url',
                                     mods: { theme: 'normal', size: 'm', 'has-clear': true },
-                                    placeholder: 'URL...'
+                                    placeholder: 'real URL with its protocol at the beginning...'
                                 },
                                 ' ',
                                 {
@@ -99,10 +100,14 @@
                         {
                             content: [
                                 {
+                                    block: 'label',
+                                    content: 'Description'
+                                },
+                                {
                                     block: 'input',
                                     name: 'description',
                                     mods: { theme: 'normal', size: 'm', 'has-clear': true },
-                                    placeholder: 'Description...',
+                                    placeholder: 'any string you like...',
                                 },
                                 ' ',
                                 {
@@ -116,6 +121,10 @@
                         { tag: 'br' },
                         {
                             content: [
+                                {
+                                    block: 'label',
+                                    content: 'PNG image'
+                                },
                                 {
                                     block: 'attach',
                                     name: 'image',
@@ -129,10 +138,14 @@
                         {
                             content: [
                                 {
+                                    block: 'label',
+                                    content: 'Email'
+                                },
+                                {
                                     block: 'input',
                                     name: 'email',
                                     mods: { theme: 'normal', size: 'm', 'has-clear': true },
-                                    placeholder: 'Email...',
+                                    placeholder: 'correct email format is expected...',
                                 },
                                 ' ',
                                 {
@@ -145,19 +158,27 @@
                         },
                         { tag: 'br' },
                         {
-                            block: 'button',
-                            text: 'Create Issuer',
-                            mods: {
-                                type: 'submit',
-                                theme: 'normal',
-                                size: 'm',
-                                view: 'action'
-                            }
-                        },
-                        ' ',
-                        {
-                            block: 'spin',
-                            mods: { theme: 'normal', size: 'm' }
+                            content: [
+                                {
+                                    block: 'label',
+                                    content: ''
+                                },
+                                {
+                                    block: 'button',
+                                    text: 'Create',
+                                    mods: {
+                                        type: 'submit',
+                                        theme: 'normal',
+                                        size: 'l',
+                                        view: 'action'
+                                    }
+                                },
+                                ' ',
+                                {
+                                    block: 'spin',
+                                    mods: { theme: 'normal', size: 'm' }
+                                }
+                            ]
                         }
                     ]
                 }

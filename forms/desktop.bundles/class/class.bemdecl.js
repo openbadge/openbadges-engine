@@ -161,6 +161,9 @@ exports.blocks = [
         "name": "form"
     },
     {
+        "name": "label"
+    },
+    {
         "name": "input"
     },
     {
