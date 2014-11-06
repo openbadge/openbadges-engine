@@ -29,7 +29,7 @@
                         block: 'input',
                         name: 'username',
                         mods: { theme: 'normal', size: 'm', 'has-clear': true, auth: true },
-                        placeholder: 'Username...'
+                        placeholder: 'username'
                     }
                 },
                 { tag: 'br' },
@@ -38,7 +38,7 @@
                         block: 'input',
                         name: 'password',
                         mods: { theme: 'normal', size: 'm', 'has-clear': true, type: 'password', auth: true },
-                        placeholder: 'Password...'
+                        placeholder: 'password'
                     }
                 },
                 { tag: 'br' },

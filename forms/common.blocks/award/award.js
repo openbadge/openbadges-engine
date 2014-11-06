@@ -25,7 +25,6 @@ modules.define('award', ['i-bem__dom', 'jquery', 'querystring'], function (provi
                             spin.delMod('progress');
                             submitButton.delMod('disabled');
                         } else {
-                            console.log(formVals);
                             $.post('/manual-awarding', formVals, function (data) {
                                 spin.delMod('progress');
                                 submitButton.delMod('disabled');

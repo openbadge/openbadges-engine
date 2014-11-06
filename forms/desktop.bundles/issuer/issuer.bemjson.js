@@ -63,7 +63,7 @@
                                     block: 'input',
                                     name: 'name',
                                     mods: { theme: 'normal', size: 'm', 'has-clear': true },
-                                    placeholder: 'any string you like...'
+                                    placeholder: 'any string you like'
                                 },
                                 ' ',
                                 {
@@ -85,7 +85,7 @@
                                     block: 'input',
                                     name: 'url',
                                     mods: { theme: 'normal', size: 'm', 'has-clear': true },
-                                    placeholder: 'real URL with its protocol at the beginning...'
+                                    placeholder: 'real URL is expected'
                                 },
                                 ' ',
                                 {
@@ -107,7 +107,7 @@
                                     block: 'input',
                                     name: 'description',
                                     mods: { theme: 'normal', size: 'm', 'has-clear': true },
-                                    placeholder: 'any string you like...',
+                                    placeholder: 'any string you like',
                                 },
                                 ' ',
                                 {
@@ -129,8 +129,12 @@
                                     block: 'attach',
                                     name: 'image',
                                     mods: { theme: 'simple' },
-                                    button: 'Choose a file',
-                                    noFileText: 'Not chosen'
+                                    button: {
+                                        block: 'button',
+                                        mods : { theme : 'normal', size: 'm' },
+                                        text : 'Choose a file'
+                                    },
+                                    noFileText: ''
                                 }
                             ]
                         },
@@ -145,7 +149,7 @@
                                     block: 'input',
                                     name: 'email',
                                     mods: { theme: 'normal', size: 'm', 'has-clear': true },
-                                    placeholder: 'correct email format is expected...',
+                                    placeholder: 'correct email format is expected',
                                 },
                                 ' ',
                                 {
