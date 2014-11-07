@@ -192,7 +192,7 @@
                                 ' ',
                                 {
                                     block: 'spin',
-                                    mods: { theme: 'normal', size: 'm' }
+                                    mods: { theme: 'normal', size: 'l' }
                                 }
                             ]
                         }
