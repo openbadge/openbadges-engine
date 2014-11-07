@@ -4,12 +4,14 @@ modules.define('issuer', ['i-bem__dom', 'jquery', 'querystring'], function (prov
             js: {
                 inited: function () {
                     var inputs = this.findBlocksInside('input'),
+                        nameInput = inputs[0],
                         buttons = this.findBlocksInside('button'),
                         submitButton = buttons[buttons.length - 1],
                         spin = this.findBlockInside('spin'),
                         attach = this.findBlockInside('attach'),
+                        form = this.findBlockInside('form'),
                         errors = this.findBlocksInside('error'),
-                        form = this.findBlockInside('form');
+                        nameError = errors[0];
 
                     var url = window.location.href,
                         queriesStartIndex = url.indexOf('?') + 1,
@@ -37,6 +39,8 @@ modules.define('issuer', ['i-bem__dom', 'jquery', 'querystring'], function (prov
                         submitButton.setMod('disabled');
                         spin.setMod('progress');
 
+                        nameError.domElem.text('Fill this field!');
+
                         var isError = false,
                             formVals = qs.parse(form.domElem.serialize());
 
@@ -62,6 +66,13 @@ modules.define('issuer', ['i-bem__dom', 'jquery', 'querystring'], function (prov
                                 });
                             }
                         });
+
+                        var nameInputVal = nameInput.elem('control').val();
+                        if (/[^A-Za-z0-9_\- ]/.test(nameInputVal)) {
+                            nameError.domElem.text('Invalid class name!');
+                            nameError.delMod('disabled');
+                            isError = true;
+                        }
 
                         if (isError) {
                             e.preventDefault();

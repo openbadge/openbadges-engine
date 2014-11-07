@@ -4,6 +4,7 @@ modules.define('class', ['i-bem__dom', 'jquery', 'querystring'], function (provi
             js: {
                 inited: function () {
                     var inputs = this.findBlocksInside('input'),
+                        nameInput = inputs[0];
                         attach = this.findBlockInside('attach'),
                         buttons = this.findBlocksInside('button'),
                         submitButton = buttons[buttons.length - 1],
@@ -72,6 +73,13 @@ modules.define('class', ['i-bem__dom', 'jquery', 'querystring'], function (provi
                                 });
                             }
                         });
+
+                        var nameInputVal = nameInput.elem('control').val();
+                        if (/[^A-Za-z0-9_\- ]/.test(nameInputVal)) {
+                            nameError.domElem.text('Invalid class name!');
+                            nameError.delMod('disabled');
+                            isError = true;
+                        }
 
                         if (!isError) {
                             $.post('/check-class-existence', formVals, function (data) {

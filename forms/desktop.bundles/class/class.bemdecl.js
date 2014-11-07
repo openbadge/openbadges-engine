@@ -167,6 +167,9 @@ exports.blocks = [
         "name": "input"
     },
     {
+        "name": "note"
+    },
+    {
         "name": "input",
         "mods": [
             {

@@ -174,7 +174,44 @@ exports.blocks = [
         "name": "form"
     },
     {
+        "name": "note"
+    },
+    {
+        "name": "note",
+        "mods": [
+            {
+                "name": "disabled",
+                "vals": [
+                    {
+                        "name": true
+                    }
+                ]
+            }
+        ]
+    },
+    {
         "name": "label"
+    },
+    {
+        "name": "label",
+        "mods": [
+            {
+                "name": "disabled",
+                "vals": [
+                    {
+                        "name": true
+                    }
+                ]
+            },
+            {
+                "name": "bold",
+                "vals": [
+                    {
+                        "name": true
+                    }
+                ]
+            }
+        ]
     },
     {
         "name": "input"
@@ -210,6 +247,19 @@ exports.blocks = [
         "mods": [
             {
                 "name": "has-clear",
+                "vals": [
+                    {
+                        "name": true
+                    }
+                ]
+            }
+        ]
+    },
+    {
+        "name": "input",
+        "mods": [
+            {
+                "name": "hidden",
                 "vals": [
                     {
                         "name": true
@@ -330,9 +380,6 @@ exports.blocks = [
                 ]
             }
         ]
-    },
-    {
-        "name": "awardUrl"
     },
     {
         "name": "VsFoot"

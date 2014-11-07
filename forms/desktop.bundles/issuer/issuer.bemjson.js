@@ -21,13 +21,13 @@
                         elem : 'item',
                         mods : { hit : true, current : true },
                         url : '/issuer',
-                        content : 'Create an issuer'
+                        content : 'Issuer'
                     },
                     {
                         elem : 'item',
                         url : '/class',
                         mods: { disabled: true },
-                        content : 'Create classes'
+                        content : 'Create badges'
                     },
                     {
                         elem : 'item',
@@ -63,7 +63,7 @@
                                     block: 'input',
                                     name: 'name',
                                     mods: { theme: 'normal', size: 'm', 'has-clear': true },
-                                    placeholder: 'any string you like'
+                                    placeholder: 'organization which is going to award badges'
                                 },
                                 ' ',
                                 {
@@ -71,6 +71,10 @@
                                     name: 'name',
                                     mods: { disabled: true },
                                     content: 'Fill this field!'
+                                },
+                                {
+                                    block: 'note',
+                                    content: 'latin symbols including spaces, underscores and hyphens'
                                 }
                             ]
                         },
@@ -85,7 +89,7 @@
                                     block: 'input',
                                     name: 'url',
                                     mods: { theme: 'normal', size: 'm', 'has-clear': true },
-                                    placeholder: 'real URL is expected'
+                                    placeholder: 'site of the organization'
                                 },
                                 ' ',
                                 {
@@ -93,6 +97,10 @@
                                     name: 'url',
                                     mods: { disabled: true },
                                     content: 'Fill this field!'
+                                },
+                                {
+                                    block: 'note',
+                                    content: 'real url is expected'
                                 }
                             ]
                         },
@@ -107,7 +115,7 @@
                                     block: 'input',
                                     name: 'description',
                                     mods: { theme: 'normal', size: 'm', 'has-clear': true },
-                                    placeholder: 'any string you like',
+                                    placeholder: 'some information about the organization',
                                 },
                                 ' ',
                                 {
@@ -123,7 +131,7 @@
                             content: [
                                 {
                                     block: 'label',
-                                    content: 'PNG image'
+                                    content: 'Emblem'
                                 },
                                 {
                                     block: 'attach',
@@ -135,6 +143,10 @@
                                         text : 'Choose a file'
                                     },
                                     noFileText: ''
+                                },
+                                {
+                                    block: 'note',
+                                    content: 'PNG image'
                                 }
                             ]
                         },
@@ -149,7 +161,7 @@
                                     block: 'input',
                                     name: 'email',
                                     mods: { theme: 'normal', size: 'm', 'has-clear': true },
-                                    placeholder: 'correct email format is expected',
+                                    placeholder: 'email of the organization',
                                 },
                                 ' ',
                                 {
