@@ -23,7 +23,7 @@
     "openbadges": "./bin/openbadges"
   },
   "dependencies": {
-    "openbadges-issuer-api": "https://github.com/openbadge/openbadges-issuer-api/archive/master.tar.gz",
+    "openbadges-issuer-api": "0.0.1-alpha3",
     "express": "4.9.4",
     "serve-static": "1.1.0",
     "body-parser": "1.8.3",
@@ -49,9 +49,7 @@
     "enb-modules": "0.2.0",
     "enb-stylus": "1.1.2",
     "stylus": "0.47.1",
-    "ym": "0.1.0",
-    "bh": "^3.1.4",
-    "enb-bh": "^0.2.3"
+    "ym": "0.1.0"
   },
   "devDependencies": {
     "jshint": "2.5.3",
