@@ -62,6 +62,7 @@
                                 {
                                     block: 'input',
                                     name: 'name',
+                                    autocomplete: false,
                                     mods: { theme: 'normal', size: 'm', 'has-clear': true },
                                     placeholder: 'organization which is going to award badges'
                                 },
@@ -88,6 +89,7 @@
                                 {
                                     block: 'input',
                                     name: 'url',
+                                    autocomplete: false,
                                     mods: { theme: 'normal', size: 'm', 'has-clear': true },
                                     placeholder: 'site of the organization'
                                 },
@@ -114,6 +116,7 @@
                                 {
                                     block: 'input',
                                     name: 'description',
+                                    autocomplete: false,
                                     mods: { theme: 'normal', size: 'm', 'has-clear': true },
                                     placeholder: 'some information about the organization',
                                 },
@@ -160,6 +163,7 @@
                                 {
                                     block: 'input',
                                     name: 'email',
+                                    autocomplete: false,
                                     mods: { theme: 'normal', size: 'm', 'has-clear': true },
                                     placeholder: 'email of the organization',
                                 },
