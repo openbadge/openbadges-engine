@@ -7,7 +7,7 @@ modules.define('auth', ['i-bem__dom', 'jquery', 'querystring'], function (provid
                         var button = this.findBlockInside('button'),
                             spin = this.findBlockInside('spin'),
                             error = this.findBlockInside('error'),
-                            form = this.findBlockInside('form'),
+                            form = this.findBlockInside('authForm'),
                             formVals = qs.parse(form.domElem.serialize());
 
                         button.setMod('disabled');

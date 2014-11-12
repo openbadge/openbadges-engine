@@ -1,0 +1,7 @@
+block('VsCopyright')(
+    content()(function() {
+        var year = new Date().getFullYear();
+
+        return '© ' + year + ' ООО Yandex';
+    })
+)

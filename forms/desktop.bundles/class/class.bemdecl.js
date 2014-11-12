@@ -1,8 +1,5 @@
 exports.blocks = [
     {
-        "name": "page"
-    },
-    {
         "name": "page",
         "mods": [
             {
@@ -13,21 +10,98 @@ exports.blocks = [
                     }
                 ]
             }
-        ]
-    },
-    {
-        "name": "page",
+        ],
         "elems": [
             {
                 "name": "css"
+            },
+            {
+                "name": "js"
             }
         ]
     },
     {
-        "name": "page",
+        "name": "VsHead"
+    },
+    {
+        "name": "VsHeadMenu",
         "elems": [
             {
-                "name": "js"
+                "name": "item",
+                "mods": [
+                    {
+                        "name": "hit",
+                        "vals": [
+                            {
+                                "name": true
+                            }
+                        ]
+                    },
+                    {
+                        "name": "current",
+                        "vals": [
+                            {
+                                "name": true
+                            }
+                        ]
+                    },
+                    {
+                        "name": "disabled",
+                        "vals": [
+                            {
+                                "name": true
+                            }
+                        ]
+                    }
+                ]
+            }
+        ]
+    },
+    {
+        "name": "button",
+        "mods": [
+            {
+                "name": "theme",
+                "vals": [
+                    {
+                        "name": "normal"
+                    }
+                ]
+            },
+            {
+                "name": "type",
+                "vals": [
+                    {
+                        "name": "link"
+                    }
+                ]
+            },
+            {
+                "name": "size",
+                "vals": [
+                    {
+                        "name": "xl"
+                    },
+                    {
+                        "name": "l"
+                    }
+                ]
+            },
+            {
+                "name": "view",
+                "vals": [
+                    {
+                        "name": "action"
+                    }
+                ]
+            },
+            {
+                "name": "type",
+                "vals": [
+                    {
+                        "name": "submit"
+                    }
+                ]
             }
         ]
     },
@@ -35,26 +109,13 @@ exports.blocks = [
         "name": "class"
     },
     {
-        "name": "link"
-    },
-    {
-        "name": "link",
-        "mods": [
-            {
-                "name": "theme",
-                "vals": [
-                    {
-                        "name": "normal"
-                    }
-                ]
-            }
-        ]
-    },
-    {
         "name": "form"
     },
     {
-        "name": "input"
+        "name": "label"
+    },
+    {
+        "name": "note"
     },
     {
         "name": "input",
@@ -66,12 +127,7 @@ exports.blocks = [
                         "name": "normal"
                     }
                 ]
-            }
-        ]
-    },
-    {
-        "name": "input",
-        "mods": [
+            },
             {
                 "name": "size",
                 "vals": [
@@ -79,12 +135,7 @@ exports.blocks = [
                         "name": "m"
                     }
                 ]
-            }
-        ]
-    },
-    {
-        "name": "input",
-        "mods": [
+            },
             {
                 "name": "has-clear",
                 "vals": [
@@ -94,9 +145,6 @@ exports.blocks = [
                 ]
             }
         ]
-    },
-    {
-        "name": "error"
     },
     {
         "name": "error",
@@ -112,9 +160,6 @@ exports.blocks = [
         ]
     },
     {
-        "name": "attach"
-    },
-    {
         "name": "attach",
         "mods": [
             {
@@ -128,64 +173,6 @@ exports.blocks = [
         ]
     },
     {
-        "name": "button"
-    },
-    {
-        "name": "button",
-        "mods": [
-            {
-                "name": "type",
-                "vals": [
-                    {
-                        "name": "submit"
-                    }
-                ]
-            }
-        ]
-    },
-    {
-        "name": "button",
-        "mods": [
-            {
-                "name": "theme",
-                "vals": [
-                    {
-                        "name": "normal"
-                    }
-                ]
-            }
-        ]
-    },
-    {
-        "name": "button",
-        "mods": [
-            {
-                "name": "size",
-                "vals": [
-                    {
-                        "name": "m"
-                    }
-                ]
-            }
-        ]
-    },
-    {
-        "name": "button",
-        "mods": [
-            {
-                "name": "view",
-                "vals": [
-                    {
-                        "name": "action"
-                    }
-                ]
-            }
-        ]
-    },
-    {
-        "name": "spin"
-    },
-    {
         "name": "spin",
         "mods": [
             {
@@ -195,20 +182,18 @@ exports.blocks = [
                         "name": "normal"
                     }
                 ]
-            }
-        ]
-    },
-    {
-        "name": "spin",
-        "mods": [
+            },
             {
                 "name": "size",
                 "vals": [
                     {
-                        "name": "m"
+                        "name": "l"
                     }
                 ]
             }
         ]
+    },
+    {
+        "name": "VsFoot"
     }
 ];

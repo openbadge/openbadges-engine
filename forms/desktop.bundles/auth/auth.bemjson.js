@@ -13,7 +13,7 @@
     content: {
         block: 'auth',
         content: {
-            block: 'form',
+            block: 'authForm',
             action: '/auth',
             method: 'post',
             content: [
@@ -28,8 +28,8 @@
                     content: {
                         block: 'input',
                         name: 'username',
-                        mods: { theme: 'normal', size: 'm', 'has-clear': true },
-                        placeholder: 'Username...'
+                        mods: { theme: 'normal', size: 'm', 'has-clear': true, auth: true },
+                        placeholder: 'username'
                     }
                 },
                 { tag: 'br' },
@@ -37,15 +37,15 @@
                     content: {
                         block: 'input',
                         name: 'password',
-                        mods: { theme: 'normal', size: 'm', 'has-clear': true, type: 'password' },
-                        placeholder: 'Password...'
+                        mods: { theme: 'normal', size: 'm', 'has-clear': true, type: 'password', auth: true },
+                        placeholder: 'password'
                     }
                 },
                 { tag: 'br' },
                 {
                     block: 'button',
                     text: 'Sign In',
-                    mods: { type: 'submit', theme: 'normal', size: 'm', view: 'action' }
+                    mods: { type: 'submit', theme: 'normal', size: 'xl', view: 'action' }
                 },
                 ' ',
                 {

@@ -1,0 +1,29 @@
+.VsFoot
+{
+    border-top: 1px solid #ccc;
+    font-size: 11px;
+
+    left:0px;
+    bottom:0px;
+    height:30px;
+    width:100%;
+    position: fixed;
+
+    &.VsStackedLayout
+    {
+        justify-content: space-between;
+        padding: 10px;
+    }
+
+    & .VsStackedLayout__item
+    {
+        flex-grow: 1;
+        padding: 10px;
+
+        &:first-child
+        {
+            flex-grow: 20;
+            margin-left: 10px;
+        }
+    }
+}

@@ -1,0 +1,38 @@
+.VsHead__service
+{
+    box-sizing: border-box;
+    display: inline-block;
+
+    position: relative;
+
+    background: #cd5c5c;
+    background: linear-gradient(to bottom, #d55e5e 0%, #d16666 100%);
+
+    color: #fff;
+
+    font-family: TextBook, sans-serif;
+    font-size: 22px;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+
+    white-space: nowrap;
+
+    padding: 0 32px 0 20px;
+
+    height: 50px;
+    line-height: 49px;
+
+    &::after
+    {
+        background: url(../arrow.svg) no-repeat 100% 50%;
+
+        position: absolute;
+        top: 0;
+        right: 0;
+        bottom: 0;
+        z-index: 1;
+
+        width: 25px;
+        content: '';
+    }
+}

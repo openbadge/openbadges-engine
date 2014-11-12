@@ -1,0 +1,32 @@
+block('VsHead')(
+    js()(true),
+    tag()('header'),
+    mix()({ block : 'VsStackedLayout' }),
+    content()(function(){
+        var ctx = this.ctx;
+
+        return [
+            {
+                block : 'VsStackedLayout',
+                elem : 'item',
+                content : {
+                    block : 'VsHead',
+                    elem : 'service',
+                    content : ctx.service
+                }
+            },
+            {
+                block : 'VsStackedLayout',
+                elem : 'item',
+                mix : { block : 'VsHead', elem : 'left' },
+                content : ctx.left
+            },
+            {
+                block : 'VsStackedLayout',
+                elem : 'item',
+                mix : { block : 'VsHead', elem : 'right' },
+                content : ctx.right
+            }
+        ];
+    })
+);

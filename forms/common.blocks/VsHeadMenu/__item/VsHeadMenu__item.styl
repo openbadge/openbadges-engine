@@ -1,0 +1,56 @@
+.VsHeadMenu__item
+{
+    color: #000;
+    font-size: 15px;
+
+    display: block;
+
+    line-height: 50px;
+    text-decoration: none;
+
+    margin-right: 30px;
+
+    white-space: nowrap;
+
+    &::before
+    {
+        content: '';
+
+        display: block;
+        height: 3px;
+        margin-bottom: -3px;
+
+        transition: background-color .15s ease-out
+            color .15s ease-out;
+    }
+
+    &.link_hovered
+    {
+        color: #d00;
+
+        &::before
+        {
+            background-color: #cd5c5c;
+        }
+    }
+}
+
+.VsHeadMenu__item_hit
+{
+    color: #777
+
+    &::before
+    {
+        background-color: #777;
+    }
+}
+
+.VsHeadMenu__item_disabled
+{
+    color: #909090;
+
+    &::hover
+    {
+        background-color: #909090;
+    }
+}
