@@ -11,14 +11,19 @@ modules.define('class', ['i-bem__dom', 'jquery', 'querystring'], function (provi
                         spin = this.findBlockInside('spin'),
                         form = this.findBlockInside('form'),
                         errors = this.findBlocksInside('error'),
-                        nameError = errors[0];
+                        nameError = errors[0],
+                        urlError = errors[errors.length - 1];
+
+                    // --
 
                     var url = window.location.href,
                         queriesStartIndex = url.indexOf('?') + 1,
                         data = queriesStartIndex ? url.substring(queriesStartIndex).split('&') : [],
                         inpVals = {};
 
+                    /* jshint ignore:start */
                     queriesStartIndex && attach.elem('no-file').text('PNG image is expected') && attach.setMod('error');
+                    /* jshint ignore:end */
 
                     for (var i = 0; i < data.length; i++) {
                         var key = data[i].substring(0, data[i].indexOf('=')).replace(/%20/g, ' '),
@@ -32,21 +37,22 @@ modules.define('class', ['i-bem__dom', 'jquery', 'querystring'], function (provi
                             if (input.elem('control').attr('name') === val) {
                                 input.elem('control').val(inpVals[val]);
                             }
-                        })
+                        });
                     });
 
                     this.bindTo('submit', function (e) {
                         var _this = this;
+                        submitButton.setMod('disabled');
+                        spin.setMod('progress');
 
                         if (this.checkedOnErrors) {
-                            submitButton.setMod('disabled');
-                            spin.setMod('progress');
                             return;
                         }
 
                         e.preventDefault();
 
                         nameError.domElem.text('Fill this field!');
+                        urlError.domElem.text('Fill this field!');
 
                         var isError = false,
                             formVals = qs.parse(form.domElem.serialize());
@@ -84,13 +90,27 @@ modules.define('class', ['i-bem__dom', 'jquery', 'querystring'], function (provi
                         if (!isError) {
                             $.post('/check-class-existence', formVals, function (data) {
                                 if (data === 'Ok!') {
-                                    _this.checkedOnErrors = true;
-                                    form.domElem.submit();
+                                    $.post('/check-url', { url: formVals.criteria }, function (data) {
+                                        if (data === 'Ok!') {
+                                            _this.checkedOnErrors = true;
+                                            form.domElem.submit();
+                                        } else {
+                                            $(urlError.domElem).text('Bad URL!');
+                                            urlError.delMod('disabled');
+                                            submitButton.delMod('disabled');
+                                            spin.delMod('progress');
+                                        }
+                                    });
                                 } else {
                                     $(nameError.domElem).text('Exists!');
                                     nameError.delMod('disabled');
+                                    submitButton.delMod('disabled');
+                                    spin.delMod('progress');
                                 }
                             });
+                        } else {
+                            submitButton.delMod('disabled');
+                            spin.delMod('progress');
                         }
                     });
                 }
