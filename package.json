@@ -55,8 +55,8 @@
     "ym": "0.1.0"
   },
   "devDependencies": {
-    "jshint": "2.5.3",
-    "jscs": "1.5.9"
+    "jshint": "2.6.3",
+    "jscs": "1.11.3"
   },
   "scripts": {
     "start": "bin/openbadges",

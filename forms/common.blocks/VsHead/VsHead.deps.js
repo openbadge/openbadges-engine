@@ -1,6 +1,6 @@
 ({
-    shouldDeps : [
-        { elem : 'service' },
+    shouldDeps: [
+        { elem: 'service' },
         'BemView',
         'VsStackedLayout',
         'VsHeadMenu',

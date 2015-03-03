@@ -19,9 +19,8 @@ modules.define('issuer', ['i-bem__dom', 'jquery', 'querystring'], function (prov
                         data = queriesStartIndex ? url.substring(queriesStartIndex).split('&') : [],
                         inpVals = {};
 
-                    /* jshint ignore:start */
-                    queriesStartIndex && attach.elem('no-file').text('PNG image is expected') && attach.setMod('error');
-                    /* jshint ignore:end */
+                    // jscs: disable
+                    queriesStartIndex && attach.elem('no-file').text('PNG image is expected') && attach.setMod('error'); // jshint ignore:line
 
                     for (var i = 0; i < data.length; i++) {
                         var key = data[i].substring(0, data[i].indexOf('=')).replace(/%20/g, ' '),

@@ -1,3 +1,3 @@
 ({
-    shouldDeps : { block : 'fontFace', elems : 'textbook' }
+    shouldDeps: { block: 'fontFace', elems: 'textbook' }
 })

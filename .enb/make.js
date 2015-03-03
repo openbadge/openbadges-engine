@@ -38,7 +38,7 @@ module.exports = function (config) {
             [tech.fileProvider, { target: '?.bemdecl.js' }],
         ]);
 
-        nodeConfig.addTargets([/* '?.bemtree.js', */ '?.bemhtml.js']);
+        nodeConfig.addTargets(['?.bemhtml.js']);
     });
 
     config.nodes([
@@ -51,7 +51,7 @@ module.exports = function (config) {
             [tech.htmlFromBemjson]
         ]);
 
-        nodeConfig.addTargets([/* '?.bemtree.js', */ '?.html']);
+        nodeConfig.addTargets(['?.html']);
     });
 
     config.nodes('forms/*.bundles/*', function (nodeConfig) {
@@ -105,7 +105,7 @@ module.exports = function (config) {
             [tech.prependYm, { source: '?.pre.js' }]
         ]);
 
-        nodeConfig.addTargets([/* '?.bemtree.js', */ '_?.css', '_?.js']);
+        nodeConfig.addTargets(['_?.css', '_?.js']);
 
         nodeConfig.addTechs([
             [tech.borschik, { sourceTarget: '?.js', destTarget: '_?.js', freeze:true }],

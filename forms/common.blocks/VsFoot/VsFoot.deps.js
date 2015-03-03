@@ -1,6 +1,6 @@
 ({
-    shouldDeps : [
-        { elems : 'copyright' },
+    shouldDeps: [
+        { elems: 'copyright' },
         'link',
         'VsStackedLayout',
         'VsCopyright'
