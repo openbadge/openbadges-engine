@@ -1,6 +1,6 @@
 {
   "name": "openbadges-engine",
-  "version": "0.0.0",
+  "version": "0.0.1",
   "description": "Open Badges' CMS based on Express framework",
   "keywords": [
     "openbadges",
